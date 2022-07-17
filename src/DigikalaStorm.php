@@ -14,7 +14,8 @@ class DigikalaStorm extends \YiiMan\ApiStorm\Core\Connection
     public $protocol = 'https';
 
     /**
-     * @param $productId
+     * اطلاعات صفحه ی محصول را بازگردانی میکند
+     * @param  string  $productId  شماره شناسه ی محصول که  معمولا در ادرس صفحه ی محصول قابل مشاهده است
      * @return \YiiMan\ApiStorm\Core\Res|Data
      */
     public function getProduct($productId)
