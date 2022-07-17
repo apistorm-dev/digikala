@@ -25,4 +25,17 @@ class DigikalaStorm extends \YiiMan\ApiStorm\Core\Connection
         }
         return $product;
     }
+
+    /**
+     * اطلاعات صفحه ی یک دسته(خوشه) ی خاص را به صورت کلاسیفای شده بر میگرداند
+     * @param  string  $slugName  Category URL usually is like this : /search/{$slugName}
+     */
+    public function getCategory($slugName)
+    {
+        $category = $this->call('v1/categories/'.$slugName.'/search/', [], [], [], 'get', [], true);
+        if ($category->isSuccess()) {
+            return new \YiiMan\Digikala\Response\category\Data($category);
+        }
+        return $category;
+    }
 }
