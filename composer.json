@@ -1,0 +1,20 @@
+{
+    "name": "yiiman/digikala",
+    "type": "library",
+    "require": {
+        "yiiman/apistorm": "dev-main"
+    },
+    "license": "Apache2",
+    "autoload": {
+        "psr-4": {
+            "YiiMan\\Digikala\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "YiiMan",
+            "email": "info@apistorm.ir"
+        }
+    ],
+    "minimum-stability": "dev"
+}
